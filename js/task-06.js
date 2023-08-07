@@ -3,7 +3,7 @@ const inputElement = document.getElementById('validation-input');
 inputElement.addEventListener('blur',currentInput);
 
 function currentInput() {
-    const strictLength = parseInt(inputElement.getAttribute('data-length'));
+    const strictLength = parseInt(inputElement.dataset.length);
 
     const currentLength = inputElement.value.length;
 

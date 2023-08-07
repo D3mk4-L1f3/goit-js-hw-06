@@ -9,19 +9,20 @@ const ingredients = [
 
 const recipeList = document.getElementById('ingredients');
 
-const partOfList = document.createDocumentFragment();
+const partOfList = [];
 
 
 ingredients.forEach((ingredient) => {
 
-  const recipeItem = document.createElement('li');
+  const listItem = document.createElement('li');
 
-  recipeItem.textContent = ingredient;
-
-  recipeItem.classList.add('item');
+  listItem.textContent = ingredient;
   
-  recipeList.appendChild(recipeItem)
+  listItem.classList.add('item');
+  
+  partOfList.push(listItem);
+  
 });
 
 
-recipeList.appendChild(partOfList);
+recipeList.append(...partOfList);
